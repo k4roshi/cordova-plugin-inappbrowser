@@ -110,6 +110,7 @@ var IAB = {
             // "_blank" or anything else
             if (!browserWrap) {
                 browserWrap = document.createElement("div");
+                browserWrap.className = "link-wrapper";
                 // First reset all styles for inappbrowser wrapper element
                 browserWrap.style.cssText = "margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background: 0 0;";
                 browserWrap.style.position = "fixed";
@@ -155,6 +156,7 @@ var IAB = {
                 popup.style.height = "calc(100% - 60px)";
 
                 navigationButtonsDiv = document.createElement("div");
+                navigationButtonsDiv.className = "navigation";
                 navigationButtonsDiv.style.height = "60px";
                 navigationButtonsDiv.style.backgroundColor = "#404040";
                 navigationButtonsDiv.style.zIndex = "999";
@@ -175,6 +177,7 @@ var IAB = {
 
 
                 backButton = document.createElement("button");
+                backButton.className = "back";
                 backButton.style.width = "40px";
                 backButton.style.height = "40px";
                 backButton.style.borderRadius = "40px";
@@ -186,6 +189,7 @@ var IAB = {
                 });
 
                 forwardButton = document.createElement("button");
+                forwardButton.className = "forward";
                 forwardButton.style.marginLeft = "20px";
                 forwardButton.style.width = "40px";
                 forwardButton.style.height = "40px";
@@ -198,6 +202,7 @@ var IAB = {
                 });
 
                 closeButton = document.createElement("button");
+                closeButton.className = "close";
                 closeButton.style.marginLeft = "20px";
                 closeButton.style.width = "40px";
                 closeButton.style.height = "40px";
