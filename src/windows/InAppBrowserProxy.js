@@ -57,7 +57,7 @@ function attachNavigationEvents(element, callback) {
         });
 
         element.addEventListener("MSWebViewContentLoading", function (e) {
-            if (navigationButtonsDiv) {
+            if (navigationButtonsDiv && popup) {
                 backButton.disabled = !popup.canGoBack;
                 forwardButton.disabled = !popup.canGoForward;
             }
@@ -84,7 +84,7 @@ var IAB = {
     close: function (win, lose) {
         if (browserWrap) {
             if (win) win({ type: "exit" });
-
+            popup.navigateToString("");
             browserWrap.parentNode.removeChild(browserWrap);
             browserWrap = null;
             popup = null;
